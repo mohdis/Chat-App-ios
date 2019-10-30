@@ -1,20 +1,19 @@
 //
-//  ViewController.swift
+//  ChannelViewController.swift
 //  Chat app
 //
-//  Created by Amir Mahdi Soleimani on 10/27/19.
+//  Created by Amir Mahdi Soleimani on 10/30/19.
 //  Copyright © 2019 Amir Mahdi Soleimani. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChannelViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.revealViewController()?.rearViewRevealWidth = view.frame.width * 7/8
         // Do any additional setup after loading the view.
     }
-
-
+    
 }
-

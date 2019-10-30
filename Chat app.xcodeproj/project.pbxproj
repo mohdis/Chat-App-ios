@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		11482B782365904F00B38695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11482B772365904F00B38695 /* AppDelegate.swift */; };
-		11482B7A2365904F00B38695 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11482B792365904F00B38695 /* ViewController.swift */; };
 		11482B7D2365904F00B38695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11482B7B2365904F00B38695 /* Main.storyboard */; };
 		11482B7F2365905100B38695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11482B7E2365905100B38695 /* Assets.xcassets */; };
 		11482B822365905100B38695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11482B802365905100B38695 /* LaunchScreen.storyboard */; };
 		11482B8D2369C58100B38695 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11482B8B2369C58100B38695 /* SWRevealViewController.m */; };
+		11482B902369DA5400B38695 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11482B8F2369DA5400B38695 /* ChatViewController.swift */; };
+		11482B922369DA6400B38695 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11482B912369DA6400B38695 /* ChannelViewController.swift */; };
 		27BC4CD5A15CB7238CF2B8B7 /* Pods_Chat_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B1EC37AEE596D77DB294AC /* Pods_Chat_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11482B742365904F00B38695 /* Chat app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11482B772365904F00B38695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11482B792365904F00B38695 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11482B7C2365904F00B38695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11482B7E2365905100B38695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11482B812365905100B38695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -27,6 +27,8 @@
 		11482B8A2369C58000B38695 /* Chat app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chat app-Bridging-Header.h"; sourceTree = "<group>"; };
 		11482B8B2369C58100B38695 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		11482B8C2369C58100B38695 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		11482B8F2369DA5400B38695 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		11482B912369DA6400B38695 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		1607AC5ACCF8A04317431931 /* Pods-Chat app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat app/Pods-Chat app.release.xcconfig"; sourceTree = "<group>"; };
 		8E31DFC760C9F91E02271DD0 /* Pods-Chat app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat app/Pods-Chat app.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B1EC37AEE596D77DB294AC /* Pods_Chat_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,9 +67,11 @@
 		11482B762365904F00B38695 /* Chat app */ = {
 			isa = PBXGroup;
 			children = (
+				11482B942369DA8000B38695 /* Controller */,
+				11482B932369DA7A00B38695 /* Views */,
+				11482B8E2369DA3800B38695 /* Models */,
 				11482B892369C55D00B38695 /* Supporting Files */,
 				11482B772365904F00B38695 /* AppDelegate.swift */,
-				11482B792365904F00B38695 /* ViewController.swift */,
 				11482B7B2365904F00B38695 /* Main.storyboard */,
 				11482B7E2365905100B38695 /* Assets.xcassets */,
 				11482B802365905100B38695 /* LaunchScreen.storyboard */,
@@ -84,6 +88,29 @@
 				11482B8A2369C58000B38695 /* Chat app-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11482B8E2369DA3800B38695 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11482B932369DA7A00B38695 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11482B942369DA8000B38695 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11482B8F2369DA5400B38695 /* ChatViewController.swift */,
+				11482B912369DA6400B38695 /* ChannelViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		67CC625C860B33BB5FF6B11B /* Pods */ = {
@@ -222,8 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11482B7A2365904F00B38695 /* ViewController.swift in Sources */,
 				11482B782365904F00B38695 /* AppDelegate.swift in Sources */,
+				11482B902369DA5400B38695 /* ChatViewController.swift in Sources */,
+				11482B922369DA6400B38695 /* ChannelViewController.swift in Sources */,
 				11482B8D2369C58100B38695 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
