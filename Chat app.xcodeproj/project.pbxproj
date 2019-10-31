@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110DFA20236B715C0045262E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DFA1F236B715C0045262E /* AuthService.swift */; };
 		11482B782365904F00B38695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11482B772365904F00B38695 /* AppDelegate.swift */; };
 		11482B7D2365904F00B38695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11482B7B2365904F00B38695 /* Main.storyboard */; };
 		11482B7F2365905100B38695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11482B7E2365905100B38695 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110DFA1F236B715C0045262E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		11482B742365904F00B38695 /* Chat app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11482B772365904F00B38695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11482B7C2365904F00B38695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110DFA1E236B71030045262E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				110DFA1F236B715C0045262E /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		11482B6B2365904F00B38695 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		11482B762365904F00B38695 /* Chat app */ = {
 			isa = PBXGroup;
 			children = (
+				110DFA1E236B71030045262E /* Services */,
 				11482B99236AC31900B38695 /* Utilites */,
 				11482B942369DA8000B38695 /* Controller */,
 				11482B932369DA7A00B38695 /* Views */,
@@ -272,6 +283,7 @@
 				11482B96236A07AC00B38695 /* GradiantView.swift in Sources */,
 				11482B98236AC2AF00B38695 /* LoginViewConroller.swift in Sources */,
 				11482B9B236AC32C00B38695 /* Constants.swift in Sources */,
+				110DFA20236B715C0045262E /* AuthService.swift in Sources */,
 				11482B782365904F00B38695 /* AppDelegate.swift in Sources */,
 				1153E1C9236AD4DF00F9F707 /* CreateAccountViewController.swift in Sources */,
 				11482B902369DA5400B38695 /* ChatViewController.swift in Sources */,
