@@ -9,3 +9,4 @@
 import Foundation
 
 let TO_LOGIN = "toLogin"
+let UNWIND_TO_CHANNEL = "unwindSegueToChannel"
