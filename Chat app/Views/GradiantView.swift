@@ -54,5 +54,9 @@ class GradiantView: UIView {
         gradiant.frame = self.frame
         self.layer.insertSublayer(gradiant, at: 0)
     }
+    override func awakeFromNib() {
+        self.setNeedsLayout()
+
+    }
 
 }

@@ -101,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqt-UQ-azi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqt-UQ-azi" customClass="RoundedButton" customModule="Chat_app" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="602" width="250" height="45"/>
                                 <color key="backgroundColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -109,16 +109,19 @@
                                     <constraint firstAttribute="height" constant="45" id="mjs-XM-fTE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="LOGIN">
+                                <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="pDI-RM-t7V" eventType="touchUpInside" id="neF-sk-fkr"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rrq-f3-24c">
                                 <rect key="frame" x="62.5" y="176" width="250" height="143"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZwA-PQ-E4K">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="19"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -132,7 +135,7 @@
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eL-P7-gWN">
                                         <rect key="frame" x="0.0" y="53" width="250" height="19"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -146,7 +149,7 @@
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hta-oN-iE2">
                                         <rect key="frame" x="0.0" y="106" width="250" height="19"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -195,6 +198,9 @@
                                         <state key="normal" title="Choose Avatar">
                                             <color key="titleColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseAvatarPressed:" destination="pDI-RM-t7V" eventType="touchUpInside" id="z29-P5-Ncg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-4L-4wj">
                                         <rect key="frame" x="0.0" y="115" width="151" height="29"/>
@@ -203,6 +209,9 @@
                                         <state key="normal" title="Generate background color">
                                             <color key="titleColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="generateColorPressed:" destination="pDI-RM-t7V" eventType="touchUpInside" id="uaQ-RE-792"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -223,6 +232,10 @@
                         <viewLayoutGuide key="safeArea" id="Nbi-oL-2gs"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="5eL-P7-gWN" id="cDm-gc-BAp"/>
+                        <outlet property="passwordTxt" destination="hta-oN-iE2" id="16L-Fe-L2F"/>
+                        <outlet property="userImg" destination="ga7-Oq-hfL" id="Apg-3t-3Cg"/>
+                        <outlet property="usernameTxt" destination="ZwA-PQ-E4K" id="wcP-y7-yun"/>
                         <segue destination="sWe-2P-FpT" kind="unwind" identifier="unwindSegueToChannel" unwindAction="unwindToChannelViewControllerWithSegue:" id="pru-UX-2DT"/>
                     </connections>
                 </viewController>
@@ -374,7 +387,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ceA-1b-1Tw">
                                 <rect key="frame" x="62.5" y="310" width="250" height="82"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXl-7h-Pcm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXl-7h-Pcm" customClass="RoundedButton" customModule="Chat_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="45"/>
                                         <color key="backgroundColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -418,7 +431,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-R2-Vdw">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="19"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -432,7 +445,7 @@
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p63-en-P2E">
                                         <rect key="frame" x="0.0" y="53" width="250" height="19"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>

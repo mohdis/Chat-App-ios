@@ -19,6 +19,8 @@
 		11482B98236AC2AF00B38695 /* LoginViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11482B97236AC2AF00B38695 /* LoginViewConroller.swift */; };
 		11482B9B236AC32C00B38695 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11482B9A236AC32C00B38695 /* Constants.swift */; };
 		1153E1C9236AD4DF00F9F707 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153E1C8236AD4DF00F9F707 /* CreateAccountViewController.swift */; };
+		11860FF1236C17B4004CD9D0 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860FF0236C17B4004CD9D0 /* RoundedButton.swift */; };
+		11860FF3236C2CF6004CD9D0 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860FF2236C2CF6004CD9D0 /* UserDataService.swift */; };
 		27BC4CD5A15CB7238CF2B8B7 /* Pods_Chat_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B1EC37AEE596D77DB294AC /* Pods_Chat_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		11482B97236AC2AF00B38695 /* LoginViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewConroller.swift; sourceTree = "<group>"; };
 		11482B9A236AC32C00B38695 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1153E1C8236AD4DF00F9F707 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		11860FF0236C17B4004CD9D0 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		11860FF2236C2CF6004CD9D0 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		1607AC5ACCF8A04317431931 /* Pods-Chat app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat app/Pods-Chat app.release.xcconfig"; sourceTree = "<group>"; };
 		8E31DFC760C9F91E02271DD0 /* Pods-Chat app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat app/Pods-Chat app.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B1EC37AEE596D77DB294AC /* Pods_Chat_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				110DFA1F236B715C0045262E /* AuthService.swift */,
+				11860FF2236C2CF6004CD9D0 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				11482B95236A07AC00B38695 /* GradiantView.swift */,
+				11860FF0236C17B4004CD9D0 /* RoundedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,7 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11482B96236A07AC00B38695 /* GradiantView.swift in Sources */,
+				11860FF1236C17B4004CD9D0 /* RoundedButton.swift in Sources */,
 				11482B98236AC2AF00B38695 /* LoginViewConroller.swift in Sources */,
+				11860FF3236C2CF6004CD9D0 /* UserDataService.swift in Sources */,
 				11482B9B236AC32C00B38695 /* Constants.swift in Sources */,
 				110DFA20236B715C0045262E /* AuthService.swift in Sources */,
 				11482B782365904F00B38695 /* AppDelegate.swift in Sources */,

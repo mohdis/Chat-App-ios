@@ -7,16 +7,20 @@
 //
 
 import Foundation
-//MARK:
+
 typealias completionHandler =  (_ success: Bool) -> Void
+
 //MARK: Urls
-let BASE_URL = "http://localhost:3005/v1/"
+let BASE_URL = "http://127.0.0.1:3005/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
+let URL_LOGIN = "\(BASE_URL)account/login"
+let URL_ADD_USER = "\(BASE_URL)user/add"
+
 //MARK: Segue
 let TO_LOGIN = "toLogin"
 let UNWIND_TO_CHANNEL = "unwindSegueToChannel"
 
-//MARK: User defaults
+//MARK: User defaults keys
 let USER_EMAIL = "userEmail"
 let LOGGED_IN_KEY = "loggedIn"
 let TOKEN_KEY = "token"

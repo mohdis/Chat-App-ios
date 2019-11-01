@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class AuthService {
     static let instance: AuthService = AuthService()
@@ -38,10 +39,11 @@ class AuthService {
     }
     
     func registerUser (email: String, password: String, comlection: @escaping completionHandler) {
-        let header = ["Content-Type" : "application/json; charset=utf-8"]
+        let lowerCaseEmail = email.lowercased()
         
-        let body : [String: Any] = ["password": password,
-                                         "email": email]
+        let header = ["Content-Type" : "application/json; charset=utf-8"]
+        let body : [String: Any] = ["password": password , "email": lowerCaseEmail]
+        
         Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (reponse) in
             if let error = reponse.error {
                 comlection(false)
@@ -53,7 +55,52 @@ class AuthService {
             
         }
         }
+    func loginUser (email: String, password: String, complection: @escaping completionHandler){
         
-    
+        let lowerCaseEmail = email.lowercased()
+        
+        let header = ["Content-Type" : "application/json; charset=utf-8"]
+        let body : [String: Any] = ["password": password , "email": lowerCaseEmail]
+
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            
+            guard let dataResponse = response.data else {
+                print(response.error)
+                complection(false)
+                return
+            }
+            let json = JSON(dataResponse)
+            self.isLoggedIn = true
+            self.authToken = json["token"].stringValue
+            self.userEmail = json["user"].stringValue
+            complection(true)
+        }
+    }
+    func addUser(email: String, name: String, avatarName: String, avatarColor: String, complection: @escaping completionHandler) {
+        let lowerCaseEmail = email.lowercased()
+        
+        let header = ["Content-Type" : "application/json; charset=utf-8",
+                      "Authorization" : "Bearer \(authToken)" ]
+        
+        let body : [String: Any] = ["name": name , "email": lowerCaseEmail, "avatarName": avatarName, "avatarColor": avatarColor]
+        
+        Alamofire.request(URL_ADD_USER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            
+            guard let dataResponse = response.data else {
+                print(response.error)
+                complection(false)
+                return
+            }
+            let json  = JSON(dataResponse)
+            let email = json["email"].stringValue
+            let name = json["name"].stringValue
+            let avatarName = json["avatarName"].stringValue
+            let avatarColor = json["avatarColor"].stringValue
+            let id = json["_id"].stringValue
+            
+            UserDataService.instance.setUserData(id: id, name: name, email: email, avatarName: avatarColor, avatarColor: avatarName)
+            complection(true)
+        }
+    }
 }
 
