@@ -26,6 +26,14 @@ class UserDataService {
     func setAvatarName(avatarName: String){
         self.avatarName = avatarName
     }
+    func logout() {
+        id = ""
+        name = ""
+        email = ""
+        avatarName = ""
+        avatarColor = ""
+        AuthService.instance.logout()
+    }
     func returnAvatarColor(component: String) -> UIColor {
         let scanner = Scanner(string: component)
         let skipped = CharacterSet(charactersIn: "[, ")

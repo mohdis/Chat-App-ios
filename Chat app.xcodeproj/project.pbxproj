@@ -25,6 +25,8 @@
 		11860FF7236C4B95004CD9D0 /* AvatarPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860FF6236C4B95004CD9D0 /* AvatarPickerCell.swift */; };
 		11860FF9236C6DD3004CD9D0 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860FF8236C6DD3004CD9D0 /* CircleImage.swift */; };
 		11860FFB236C7089004CD9D0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860FFA236C7089004CD9D0 /* CustomTextField.swift */; };
+		11860FFF236CB274004CD9D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860FFD236CB274004CD9D0 /* ProfileViewController.swift */; };
+		11861000236CB274004CD9D0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11860FFE236CB274004CD9D0 /* ProfileViewController.xib */; };
 		27BC4CD5A15CB7238CF2B8B7 /* Pods_Chat_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B1EC37AEE596D77DB294AC /* Pods_Chat_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		11860FF6236C4B95004CD9D0 /* AvatarPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerCell.swift; sourceTree = "<group>"; };
 		11860FF8236C6DD3004CD9D0 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		11860FFA236C7089004CD9D0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		11860FFD236CB274004CD9D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		11860FFE236CB274004CD9D0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		1607AC5ACCF8A04317431931 /* Pods-Chat app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat app/Pods-Chat app.release.xcconfig"; sourceTree = "<group>"; };
 		8E31DFC760C9F91E02271DD0 /* Pods-Chat app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat app/Pods-Chat app.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B1EC37AEE596D77DB294AC /* Pods_Chat_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,7 @@
 		11482B762365904F00B38695 /* Chat app */ = {
 			isa = PBXGroup;
 			children = (
+				11860FFC236CB238004CD9D0 /* XIBs */,
 				110DFA1E236B71030045262E /* Services */,
 				11482B99236AC31900B38695 /* Utilites */,
 				11482B942369DA8000B38695 /* Controller */,
@@ -150,6 +155,7 @@
 				11482B97236AC2AF00B38695 /* LoginViewConroller.swift */,
 				1153E1C8236AD4DF00F9F707 /* CreateAccountViewController.swift */,
 				11860FF4236C48E1004CD9D0 /* AvatarPickerViewController.swift */,
+				11860FFD236CB274004CD9D0 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +166,14 @@
 				11482B9A236AC32C00B38695 /* Constants.swift */,
 			);
 			path = Utilites;
+			sourceTree = "<group>";
+		};
+		11860FFC236CB238004CD9D0 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				11860FFE236CB274004CD9D0 /* ProfileViewController.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		67CC625C860B33BB5FF6B11B /* Pods */ = {
@@ -242,6 +256,7 @@
 			files = (
 				11482B822365905100B38695 /* LaunchScreen.storyboard in Resources */,
 				11482B7F2365905100B38695 /* Assets.xcassets in Resources */,
+				11861000236CB274004CD9D0 /* ProfileViewController.xib in Resources */,
 				11482B7D2365904F00B38695 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +319,7 @@
 				11860FF9236C6DD3004CD9D0 /* CircleImage.swift in Sources */,
 				11860FF3236C2CF6004CD9D0 /* UserDataService.swift in Sources */,
 				11482B9B236AC32C00B38695 /* Constants.swift in Sources */,
+				11860FFF236CB274004CD9D0 /* ProfileViewController.swift in Sources */,
 				110DFA20236B715C0045262E /* AuthService.swift in Sources */,
 				11860FF5236C48E1004CD9D0 /* AvatarPickerViewController.swift in Sources */,
 				11860FF7236C4B95004CD9D0 /* AvatarPickerCell.swift in Sources */,

@@ -37,6 +37,12 @@ class AuthService {
           return  userDefaults.object(forKey: TOKEN_KEY) as! String
         }
     }
+    func logout () {
+        
+        authToken = ""
+        userEmail = ""
+        isLoggedIn = false
+    }
     
     func registerUser (email: String, password: String, comlection: @escaping completionHandler) {
         let lowerCaseEmail = email.lowercased()
