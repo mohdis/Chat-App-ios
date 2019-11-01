@@ -17,11 +17,20 @@ class CreateAccountViewController: UIViewController {
     
     var avatarName = "smackProfileIcon"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(UserDataService.instance.avatarName)
+        if UserDataService.instance.avatarName != "" {
+            userImg.setImage(UIImage(named: UserDataService.instance.avatarName), for: .normal)
+        avatarName = UserDataService.instance.avatarName
+        }
+        
+    }
 
     @IBAction func closeBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: UNWIND_TO_CHANNEL , sender: nil)
@@ -57,6 +66,6 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func chooseAvatarPressed(_ sender: Any) {
-        
+        performSegue(withIdentifier:TO_AVATAR_PICKER , sender: nil)
     }
 }

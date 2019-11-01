@@ -19,7 +19,10 @@ let URL_ADD_USER = "\(BASE_URL)user/add"
 //MARK: Segue
 let TO_LOGIN = "toLogin"
 let UNWIND_TO_CHANNEL = "unwindSegueToChannel"
+let TO_AVATAR_PICKER = "toAvatarPicker"
 
+//MARK: Cell indentifier
+let AVATER_PICKER_CELL = "avatarPickerCell"
 //MARK: User defaults keys
 let USER_EMAIL = "userEmail"
 let LOGGED_IN_KEY = "loggedIn"
