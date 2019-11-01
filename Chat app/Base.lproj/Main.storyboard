@@ -119,7 +119,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rrq-f3-24c">
                                 <rect key="frame" x="62.5" y="176" width="250" height="143"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZwA-PQ-E4K">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZwA-PQ-E4K" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="19"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -133,7 +133,7 @@
                                             <constraint firstAttribute="height" constant="2" id="pVk-Gt-47p"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eL-P7-gWN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eL-P7-gWN" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="53" width="250" height="19"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -147,7 +147,7 @@
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="9jR-Xa-0BS"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hta-oN-iE2">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hta-oN-iE2" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="106" width="250" height="19"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -180,7 +180,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ufl-6f-fYJ">
                                 <rect key="frame" x="112" y="339" width="151" height="144"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga7-Oq-hfL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga7-Oq-hfL" customClass="RoundedButton" customModule="Chat_app" customModuleProvider="target">
                                         <rect key="frame" x="35.5" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -190,6 +190,9 @@
                                         <state key="normal" image="smackProfileIcon">
                                             <color key="titleColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8A-ED-W1K">
                                         <rect key="frame" x="35" y="83" width="81" height="29"/>
@@ -215,9 +218,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="s4y-KA-9EK">
+                                <rect key="frame" x="169" y="265" width="37" height="37"/>
+                                <color key="color" red="0.098468706459999999" green="0.060212844160000001" blue="0.44328997460000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="s4y-KA-9EK" firstAttribute="centerY" secondItem="Toq-gh-hCT" secondAttribute="centerY" constant="-50" id="5ZU-y2-094"/>
                             <constraint firstItem="Ov4-Xi-oYb" firstAttribute="top" secondItem="Nbi-oL-2gs" secondAttribute="top" constant="24" id="9UH-VF-lY4"/>
                             <constraint firstItem="ORU-GM-wS7" firstAttribute="centerX" secondItem="Toq-gh-hCT" secondAttribute="centerX" id="K4E-Nf-Eyi"/>
                             <constraint firstItem="Nbi-oL-2gs" firstAttribute="trailing" secondItem="Ov4-Xi-oYb" secondAttribute="trailing" constant="16" id="NxA-y7-ocg"/>
@@ -228,10 +236,12 @@
                             <constraint firstItem="rrq-f3-24c" firstAttribute="centerX" secondItem="Toq-gh-hCT" secondAttribute="centerX" id="VCp-9r-1tf"/>
                             <constraint firstItem="ORU-GM-wS7" firstAttribute="top" secondItem="Nbi-oL-2gs" secondAttribute="top" constant="75" id="l1M-By-OsK"/>
                             <constraint firstItem="Nbi-oL-2gs" firstAttribute="bottom" secondItem="bqt-UQ-azi" secondAttribute="bottom" constant="20" id="mgy-BM-G3r"/>
+                            <constraint firstItem="s4y-KA-9EK" firstAttribute="centerX" secondItem="Toq-gh-hCT" secondAttribute="centerX" id="nXe-0G-yoN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nbi-oL-2gs"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="s4y-KA-9EK" id="7Ug-I1-Iar"/>
                         <outlet property="emailTxt" destination="5eL-P7-gWN" id="cDm-gc-BAp"/>
                         <outlet property="passwordTxt" destination="hta-oN-iE2" id="16L-Fe-L2F"/>
                         <outlet property="userImg" destination="ga7-Oq-hfL" id="Apg-3t-3Cg"/>
@@ -254,7 +264,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABR-ZJ-0XV">
-                                <rect key="frame" x="16" y="44" width="28" height="30"/>
+                                <rect key="frame" x="16" y="44" width="16" height="30"/>
                                 <state key="normal" image="smackBack"/>
                                 <connections>
                                     <action selector="backPressed:" destination="z6u-Bi-Pis" eventType="touchUpInside" id="Wc0-XS-KFS"/>
@@ -353,7 +363,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-zX-fAc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-zX-fAc" customClass="CircleImage" customModule="Chat_app" customModuleProvider="target">
                                 <rect key="frame" x="16" y="567" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="304-vt-kpj"/>
@@ -518,7 +528,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LM2-Lm-hcz">
                                 <rect key="frame" x="62.5" y="190" width="250" height="90"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-R2-Vdw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2JV-R2-Vdw" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="19"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -532,7 +542,7 @@
                                             <constraint firstAttribute="width" constant="250" id="Pld-P7-eMO"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p63-en-P2E">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p63-en-P2E" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="53" width="250" height="19"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.058823529409999999" blue="0.4431372549" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>

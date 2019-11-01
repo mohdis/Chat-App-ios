@@ -10,7 +10,11 @@ import UIKit
 
 @IBDesignable
 class RoundedButton: UIButton {
-    
+    @IBInspectable var isCircle: Bool = false {
+        didSet {
+            setupView()
+        }
+    }
     @IBInspectable var cornerRadius: CGFloat = 5 {
         didSet {
             setupView()
@@ -26,7 +30,10 @@ class RoundedButton: UIButton {
         
     }
     func setupView () {
+        if isCircle {
+            self.layer.cornerRadius = self.bounds.width / 2
+        } else {
         self.layer.cornerRadius = cornerRadius
-
+        }
     }
 }
