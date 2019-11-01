@@ -39,6 +39,7 @@ class CreateAccountViewController: UIViewController {
       
         UIView.animate(withDuration: 0.3) {
             self.userImg.backgroundColor = self.generateRnadomColor()
+            self.backgroundColor = self.userImg.backgroundColor
         }
     }
     
@@ -73,6 +74,7 @@ class CreateAccountViewController: UIViewController {
         let red:   CGFloat   = CGFloat(arc4random_uniform(255))/255
         let green: CGFloat   = CGFloat(arc4random_uniform(255))/255
         let blue:  CGFloat   = CGFloat(arc4random_uniform(255))/255
+        self.avatarColor = "[\(red),\(green),\(blue),\(1)]"
         return  UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1)
     }
     
@@ -104,6 +106,7 @@ class CreateAccountViewController: UIViewController {
         if UserDataService.instance.avatarName != "" {
             userImg.setImage(UIImage(named: UserDataService.instance.avatarName), for: .normal)
             avatarName = UserDataService.instance.avatarName
+            
             if avatarName.contains("light") && backgroundColor == nil {
                 userImg.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             }

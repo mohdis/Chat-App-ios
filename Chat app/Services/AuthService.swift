@@ -98,7 +98,7 @@ class AuthService {
             let avatarColor = json["avatarColor"].stringValue
             let id = json["_id"].stringValue
             
-            UserDataService.instance.setUserData(id: id, name: name, email: email, avatarName: avatarColor, avatarColor: avatarName)
+            UserDataService.instance.setUserData(id: id, name: name, email: email, avatarName: avatarName, avatarColor: avatarColor)
             complection(true)
         }
     }

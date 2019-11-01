@@ -462,6 +462,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="WOe-g7-1DH" id="M0q-To-DZE"/>
+                        <outlet property="userImg" destination="TDs-zX-fAc" id="cQf-aX-kQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cao-za-gWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
