@@ -48,6 +48,7 @@ extension AvatarPickerViewController: UICollectionViewDelegate, UICollectionView
         return cell
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var numberOfColumns: CGFloat = 3

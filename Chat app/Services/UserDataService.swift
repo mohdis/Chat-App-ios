@@ -33,7 +33,12 @@ class UserDataService {
         avatarName = ""
         avatarColor = ""
         AuthService.instance.logout()
+        MesssageService.instance.clearChannel()
+        MesssageService.instance.clearMessage()
+
+        NotificationCenter.default.post(name: USER_DATA_CHANGED, object: nil)
     }
+    
     func returnAvatarColor(component: String) -> UIColor {
         let scanner = Scanner(string: component)
         let skipped = CharacterSet(charactersIn: "[, ")
