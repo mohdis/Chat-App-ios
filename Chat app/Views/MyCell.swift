@@ -24,7 +24,7 @@ class MyCell: UITableViewCell {
     }
     func setupView(message: Message){
         messageLbl.text = message.messageBody
-        timeStampLbl.text = "12:33 PM" //message.timeStamp
+        timeStampLbl.text = UserDataService.instance.messsageActualTime(time: message.timeStamp) 
     
      }
 

@@ -24,7 +24,8 @@ class ChatCell: UITableViewCell {
        // profileImage.image = UIImage(named: message.userAvatar)
         messageLbl.text = message.messageBody
         usernameLbl.text = message.userName
-        timeStampLbl.text = message.timeStamp
+        timeStampLbl.text = UserDataService.instance.messsageActualTime(time: message.timeStamp)
+
         
         
     }
