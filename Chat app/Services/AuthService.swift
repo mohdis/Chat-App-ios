@@ -97,6 +97,10 @@ class AuthService {
                 complection(false)
                 return
             }
+            if dataResponse.description == "0 bytes" {
+                complection(true)
+                return
+            }
             self.setUserData(response: dataResponse)
             complection(true)
         }
@@ -110,6 +114,10 @@ class AuthService {
             guard let dataResponse = response.data else {
                 print(response.error)
                 complection(false)
+                return
+            }
+            if dataResponse.description == "0 bytes" {
+                complection(true)
                 return
             }
             self.setUserData(response: dataResponse)

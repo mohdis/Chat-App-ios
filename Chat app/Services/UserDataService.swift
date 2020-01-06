@@ -9,11 +9,51 @@
 import Foundation
 class UserDataService {
    static let instance = UserDataService()
-    public private(set) var id = ""
-    public private(set) var name = ""
-    public private(set) var email = ""
-    public private(set) var avatarName = ""
-    public private(set) var avatarColor = ""
+     var id: String {
+    set {
+      UserDefaults.standard.setValue(newValue, forKey: "user_id")
+        }
+        get {
+            return UserDefaults.standard.object(forKey: "user_id") as! String
+        }
+        
+    }
+    public private(set) var name : String {
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "user_name")
+        }
+        get {
+            return UserDefaults.standard.object(forKey: "user_name") as! String
+        }
+        
+    }
+    public private(set) var email : String  {
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "user_email")
+        }
+        get {
+            return UserDefaults.standard.object(forKey: "user_email") as! String
+        }
+        
+    }
+    public private(set) var avatarName : String  {
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "user_avaterName")
+        }
+        get {
+            return UserDefaults.standard.object(forKey: "user_avaterName") as! String
+        }
+        
+    }
+    public private(set) var avatarColor : String  {
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "user_avatarColor")
+        }
+        get {
+            return UserDefaults.standard.object(forKey: "user_avatarColor") as! String
+        }
+        
+    }
     
     func setUserData(id: String, name: String, email: String, avatarName: String, avatarColor: String){
         self.id = id
@@ -27,11 +67,11 @@ class UserDataService {
         self.avatarName = avatarName
     }
     func logout() {
-        id = ""
-        name = ""
-        email = ""
-        avatarName = ""
-        avatarColor = ""
+        //id = ""
+        //name = ""
+      //  email = ""
+       // avatarName = ""
+        //avatarColor = ""
         AuthService.instance.logout()
         MesssageService.instance.clearChannel()
         MesssageService.instance.clearMessage()
