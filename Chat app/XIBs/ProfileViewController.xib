@@ -28,7 +28,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61k-Q2-IU3">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61k-Q2-IU3" customClass="RoundedButton" customModule="Chat_app" customModuleProvider="target">
                     <rect key="frame" x="37.5" y="146" width="300" height="375"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-kE-Jgv">
@@ -94,7 +94,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="0.36558219178082191" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="61k-Q2-IU3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="616-8c-4OB"/>
                 <constraint firstItem="MdG-l8-rVq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-20" id="a3d-55-CDE"/>

@@ -33,6 +33,7 @@ let TO_AVATAR_PICKER = "toAvatarPicker"
 let AVATER_PICKER_CELL = "avatarPickerCell"
 let CHANNEL_CELL = "channelCell"
 let CHAT_CELL = "chatCell"
+let MY_CELL = "myCell"
 //MARK: User defaults keys
 let USER_EMAIL = "userEmail"
 let LOGGED_IN_KEY = "loggedIn"

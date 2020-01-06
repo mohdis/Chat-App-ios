@@ -26,6 +26,7 @@ class ChatViewController: UIViewController {
         setupTableView()
         setupGetMessages()
         setupTypingUsers()
+        
     }
     func setupGetMessages() {
         SocketService.instance.getMessages { (success) in
@@ -183,10 +184,18 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
        return MesssageService.instance.messages.count
     }
     
+  
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if MesssageService.instance.messages[indexPath.row].userId == UserDataService.instance.id {
+            let cell = tableView.dequeueReusableCell(withIdentifier: MY_CELL, for: indexPath) as! MyCell
+            cell.setupView(message: MesssageService.instance.messages[indexPath.row])
+            return cell
+        } else {
         let cell = tableview.dequeueReusableCell(withIdentifier: CHAT_CELL, for: indexPath) as! ChatCell
         cell.setupView(message: MesssageService.instance.messages[indexPath.row])
         return cell
+    }
     }
     
    
