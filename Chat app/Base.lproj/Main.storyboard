@@ -76,26 +76,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LZ-F5-3LT" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Gck-LB-E9w"/>
-                                </constraints>
-                                <color key="textColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="messageTxtEditingChanged:" destination="mTW-Wo-K60" eventType="editingDidEnd" id="Myo-hA-wBp"/>
-                                    <action selector="messageTxtEditingChanged:" destination="mTW-Wo-K60" eventType="editingChanged" id="NgA-Lv-paY"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy5-im-73n">
-                                <rect key="frame" x="339" y="632" width="30" height="30"/>
-                                <state key="normal" image="send"/>
-                                <connections>
-                                    <action selector="sendMessagePressed:" destination="mTW-Wo-K60" eventType="touchUpInside" id="Zze-Vh-Pjd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUy-Wk-HgE">
                                 <rect key="frame" x="16" y="595" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -104,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TSY-TV-ILS">
-                                <rect key="frame" x="0.0" y="90" width="375" height="534"/>
+                                <rect key="frame" x="0.0" y="85" width="375" height="524"/>
                                 <color key="backgroundColor" red="0.86794467389999996" green="0.82819632720000003" blue="0.8031400689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94254016876220703" green="0.90168678760528564" blue="0.86768525838851929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -213,21 +193,70 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LZ-F5-3LT" customClass="AttributedTextField" customModule="Chat_app" customModuleProvider="target">
+                                <rect key="frame" x="16" y="617" width="290" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Ozv-iL-7ge"/>
+                                    <constraint firstAttribute="width" constant="290" id="i3K-ph-ODX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conrnerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="messageTxtEditingChanged:" destination="mTW-Wo-K60" eventType="editingDidEnd" id="Myo-hA-wBp"/>
+                                    <action selector="messageTxtEditingChanged:" destination="mTW-Wo-K60" eventType="editingChanged" id="NgA-Lv-paY"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy5-im-73n" customClass="RoundedButton" customModule="Chat_app" customModuleProvider="target">
+                                <rect key="frame" x="317" y="613" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.14679887890000001" green="0.37072366480000002" blue="0.33420833950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aZd-DO-fM6"/>
+                                    <constraint firstAttribute="width" constant="50" id="yTM-IT-Xmz"/>
+                                </constraints>
+                                <state key="normal" image="send-1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendMessagePressed:" destination="mTW-Wo-K60" eventType="touchUpInside" id="Zze-Vh-Pjd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meh" translatesAutoresizingMaskIntoConstraints="NO" id="LOd-W4-IBW">
+                                <rect key="frame" x="26" y="625" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="744-MW-lKB"/>
+                                    <constraint firstAttribute="width" constant="26" id="Mn2-9y-LGU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.86794467389999996" green="0.82819632720000003" blue="0.8031400689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oy5-im-73n" firstAttribute="centerY" secondItem="3LZ-F5-3LT" secondAttribute="centerY" id="1Jk-Eq-0WL"/>
-                            <constraint firstItem="3LZ-F5-3LT" firstAttribute="trailing" secondItem="OpZ-V6-2Jl" secondAttribute="trailing" id="2pt-p9-fhJ"/>
+                            <constraint firstItem="3LZ-F5-3LT" firstAttribute="leading" secondItem="OpZ-V6-2Jl" secondAttribute="leading" constant="16" id="1Bf-5O-J5p"/>
                             <constraint firstItem="Kmb-ef-Yjn" firstAttribute="leading" secondItem="OpZ-V6-2Jl" secondAttribute="leading" id="4KR-WO-UKt"/>
                             <constraint firstItem="Kmb-ef-Yjn" firstAttribute="top" secondItem="bKb-Ok-8hs" secondAttribute="top" id="6PC-Bd-EZi"/>
-                            <constraint firstItem="3LZ-F5-3LT" firstAttribute="leading" secondItem="OpZ-V6-2Jl" secondAttribute="leading" id="9BU-KL-Hv4"/>
                             <constraint firstItem="Kmb-ef-Yjn" firstAttribute="trailing" secondItem="OpZ-V6-2Jl" secondAttribute="trailing" id="9UW-25-wya"/>
-                            <constraint firstItem="3LZ-F5-3LT" firstAttribute="top" secondItem="TSY-TV-ILS" secondAttribute="bottom" constant="3" id="diP-6F-tZw"/>
-                            <constraint firstItem="3LZ-F5-3LT" firstAttribute="bottom" secondItem="OpZ-V6-2Jl" secondAttribute="bottom" id="hiL-7I-Hxs"/>
-                            <constraint firstItem="OpZ-V6-2Jl" firstAttribute="trailing" secondItem="oy5-im-73n" secondAttribute="trailing" constant="6" id="kk7-kv-SIM"/>
+                            <constraint firstItem="OpZ-V6-2Jl" firstAttribute="bottom" secondItem="oy5-im-73n" secondAttribute="bottom" constant="4" id="GVh-sc-vYA"/>
+                            <constraint firstItem="LOd-W4-IBW" firstAttribute="centerY" secondItem="oy5-im-73n" secondAttribute="centerY" id="Gus-Ly-IH4"/>
+                            <constraint firstItem="LOd-W4-IBW" firstAttribute="leading" secondItem="OpZ-V6-2Jl" secondAttribute="leading" constant="26" id="RpC-k1-xfv"/>
+                            <constraint firstItem="3LZ-F5-3LT" firstAttribute="centerY" secondItem="oy5-im-73n" secondAttribute="centerY" id="ejJ-qk-IeE"/>
                             <constraint firstItem="TSY-TV-ILS" firstAttribute="leading" secondItem="OpZ-V6-2Jl" secondAttribute="leading" id="pfV-6p-tXD"/>
+                            <constraint firstItem="oy5-im-73n" firstAttribute="top" secondItem="TSY-TV-ILS" secondAttribute="bottom" constant="4" id="uGm-C7-gfe"/>
                             <constraint firstItem="OpZ-V6-2Jl" firstAttribute="trailing" secondItem="TSY-TV-ILS" secondAttribute="trailing" id="vdz-dR-d6I"/>
-                            <constraint firstItem="TSY-TV-ILS" firstAttribute="top" secondItem="Kmb-ef-Yjn" secondAttribute="bottom" constant="5" id="ykW-be-NsJ"/>
+                            <constraint firstItem="OpZ-V6-2Jl" firstAttribute="trailing" secondItem="oy5-im-73n" secondAttribute="trailing" constant="8" id="xCj-fr-lIo"/>
+                            <constraint firstItem="TSY-TV-ILS" firstAttribute="top" secondItem="Kmb-ef-Yjn" secondAttribute="bottom" id="ykW-be-NsJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OpZ-V6-2Jl"/>
                     </view>
@@ -757,7 +786,8 @@
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
-        <image name="send" width="30" height="30"/>
+        <image name="meh" width="24" height="24"/>
+        <image name="send-1" width="24" height="24"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>

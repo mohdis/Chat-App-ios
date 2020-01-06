@@ -30,6 +30,9 @@
 		11860FFF236CB274004CD9D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860FFD236CB274004CD9D0 /* ProfileViewController.swift */; };
 		11861000236CB274004CD9D0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11860FFE236CB274004CD9D0 /* ProfileViewController.xib */; };
 		11B1C26423C3257300187639 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26323C3257300187639 /* MyCell.swift */; };
+		11B1C26623C3526C00187639 /* AttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26523C3526B00187639 /* AttributedTextField.swift */; };
+		11B1C26823C35D0500187639 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26723C35D0500187639 /* Tools.swift */; };
+		11B1C26A23C35DB500187639 /* UIViewExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26923C35DB500187639 /* UIViewExtenstion.swift */; };
 		11B6E2AE2374661500C7F159 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B6E2AD2374661500C7F159 /* SocketService.swift */; };
 		11B6E2B02374A81F00C7F159 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B6E2AF2374A81F00C7F159 /* Message.swift */; };
 		11FD9CC123743A0E006E5EF2 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FD9CC023743A0E006E5EF2 /* MessageService.swift */; };
@@ -68,6 +71,9 @@
 		11860FFD236CB274004CD9D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		11860FFE236CB274004CD9D0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		11B1C26323C3257300187639 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		11B1C26523C3526B00187639 /* AttributedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextField.swift; sourceTree = "<group>"; };
+		11B1C26723C35D0500187639 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		11B1C26923C35DB500187639 /* UIViewExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtenstion.swift; sourceTree = "<group>"; };
 		11B6E2AD2374661500C7F159 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		11B6E2AF2374A81F00C7F159 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		11FD9CC023743A0E006E5EF2 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -166,11 +172,13 @@
 				11860FF6236C4B95004CD9D0 /* AvatarPickerCell.swift */,
 				11FD9CC423744147006E5EF2 /* ChannelCell.swift */,
 				11482B95236A07AC00B38695 /* GradiantView.swift */,
+				11B1C26523C3526B00187639 /* AttributedTextField.swift */,
 				11860FF0236C17B4004CD9D0 /* RoundedButton.swift */,
 				11860FF8236C6DD3004CD9D0 /* CircleImage.swift */,
 				11860FFA236C7089004CD9D0 /* CustomTextField.swift */,
 				115CA18623756D9200A01761 /* ChatCell.swift */,
 				11B1C26323C3257300187639 /* MyCell.swift */,
+				11B1C26923C35DB500187639 /* UIViewExtenstion.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				11482B9A236AC32C00B38695 /* Constants.swift */,
+				11B1C26723C35D0500187639 /* Tools.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -355,9 +364,11 @@
 				11FD9CC323743A34006E5EF2 /* Channel.swift in Sources */,
 				11860FFF236CB274004CD9D0 /* ProfileViewController.swift in Sources */,
 				110DFA20236B715C0045262E /* AuthService.swift in Sources */,
+				11B1C26623C3526C00187639 /* AttributedTextField.swift in Sources */,
 				11FD9CC8237455E1006E5EF2 /* AddChannelViewController.swift in Sources */,
 				11FD9CC523744147006E5EF2 /* ChannelCell.swift in Sources */,
 				11860FF5236C48E1004CD9D0 /* AvatarPickerViewController.swift in Sources */,
+				11B1C26823C35D0500187639 /* Tools.swift in Sources */,
 				11860FF7236C4B95004CD9D0 /* AvatarPickerCell.swift in Sources */,
 				11B6E2AE2374661500C7F159 /* SocketService.swift in Sources */,
 				11482B782365904F00B38695 /* AppDelegate.swift in Sources */,
@@ -369,6 +380,7 @@
 				11482B922369DA6400B38695 /* ChannelViewController.swift in Sources */,
 				11482B8D2369C58100B38695 /* SWRevealViewController.m in Sources */,
 				11860FFB236C7089004CD9D0 /* CustomTextField.swift in Sources */,
+				11B1C26A23C35DB500187639 /* UIViewExtenstion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
