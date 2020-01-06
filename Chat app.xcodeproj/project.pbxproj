@@ -33,6 +33,12 @@
 		11B1C26623C3526C00187639 /* AttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26523C3526B00187639 /* AttributedTextField.swift */; };
 		11B1C26823C35D0500187639 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26723C35D0500187639 /* Tools.swift */; };
 		11B1C26A23C35DB500187639 /* UIViewExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26923C35DB500187639 /* UIViewExtenstion.swift */; };
+		11B1C27723C377B400187639 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C26D23C377B300187639 /* FMDatabaseQueue.m */; };
+		11B1C27823C377B400187639 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C27123C377B300187639 /* FMDatabase.m */; };
+		11B1C27923C377B400187639 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C27223C377B300187639 /* FMDatabasePool.m */; };
+		11B1C27A23C377B400187639 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C27423C377B300187639 /* FMDatabaseAdditions.m */; };
+		11B1C27B23C377B400187639 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C27623C377B400187639 /* FMResultSet.m */; };
+		11B1C27D23C3786A00187639 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1C27C23C3786A00187639 /* DBManager.swift */; };
 		11B6E2AE2374661500C7F159 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B6E2AD2374661500C7F159 /* SocketService.swift */; };
 		11B6E2B02374A81F00C7F159 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B6E2AF2374A81F00C7F159 /* Message.swift */; };
 		11FD9CC123743A0E006E5EF2 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FD9CC023743A0E006E5EF2 /* MessageService.swift */; };
@@ -74,6 +80,18 @@
 		11B1C26523C3526B00187639 /* AttributedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedTextField.swift; sourceTree = "<group>"; };
 		11B1C26723C35D0500187639 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		11B1C26923C35DB500187639 /* UIViewExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtenstion.swift; sourceTree = "<group>"; };
+		11B1C26C23C377B200187639 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		11B1C26D23C377B300187639 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		11B1C26E23C377B300187639 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		11B1C26F23C377B300187639 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		11B1C27023C377B300187639 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		11B1C27123C377B300187639 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		11B1C27223C377B300187639 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		11B1C27323C377B300187639 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		11B1C27423C377B300187639 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		11B1C27523C377B400187639 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		11B1C27623C377B400187639 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		11B1C27C23C3786A00187639 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		11B6E2AD2374661500C7F159 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		11B6E2AF2374A81F00C7F159 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		11FD9CC023743A0E006E5EF2 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -102,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				110DFA1F236B715C0045262E /* AuthService.swift */,
+				11B1C27C23C3786A00187639 /* DBManager.swift */,
 				11860FF2236C2CF6004CD9D0 /* UserDataService.swift */,
 				11FD9CC023743A0E006E5EF2 /* MessageService.swift */,
 				11B6E2AD2374661500C7F159 /* SocketService.swift */,
@@ -130,6 +149,7 @@
 		11482B762365904F00B38695 /* Chat app */ = {
 			isa = PBXGroup;
 			children = (
+				11B1C26B23C3779200187639 /* FMDB */,
 				11860FFC236CB238004CD9D0 /* XIBs */,
 				110DFA1E236B71030045262E /* Services */,
 				11482B99236AC31900B38695 /* Utilites */,
@@ -213,6 +233,24 @@
 				11860FFE236CB274004CD9D0 /* ProfileViewController.xib */,
 			);
 			path = XIBs;
+			sourceTree = "<group>";
+		};
+		11B1C26B23C3779200187639 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				11B1C27323C377B300187639 /* FMDatabase.h */,
+				11B1C27123C377B300187639 /* FMDatabase.m */,
+				11B1C27023C377B300187639 /* FMDatabaseAdditions.h */,
+				11B1C27423C377B300187639 /* FMDatabaseAdditions.m */,
+				11B1C26F23C377B300187639 /* FMDatabasePool.h */,
+				11B1C27223C377B300187639 /* FMDatabasePool.m */,
+				11B1C27523C377B400187639 /* FMDatabaseQueue.h */,
+				11B1C26D23C377B300187639 /* FMDatabaseQueue.m */,
+				11B1C26C23C377B200187639 /* FMDB.h */,
+				11B1C26E23C377B300187639 /* FMResultSet.h */,
+				11B1C27623C377B400187639 /* FMResultSet.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 		67CC625C860B33BB5FF6B11B /* Pods */ = {
@@ -356,6 +394,7 @@
 				11482B96236A07AC00B38695 /* GradiantView.swift in Sources */,
 				11860FF1236C17B4004CD9D0 /* RoundedButton.swift in Sources */,
 				115CA1852375545400A01761 /* KeyboardBoundView.swift in Sources */,
+				11B1C27823C377B400187639 /* FMDatabase.m in Sources */,
 				11482B98236AC2AF00B38695 /* LoginViewConroller.swift in Sources */,
 				11860FF9236C6DD3004CD9D0 /* CircleImage.swift in Sources */,
 				11860FF3236C2CF6004CD9D0 /* UserDataService.swift in Sources */,
@@ -363,9 +402,11 @@
 				11FD9CC123743A0E006E5EF2 /* MessageService.swift in Sources */,
 				11FD9CC323743A34006E5EF2 /* Channel.swift in Sources */,
 				11860FFF236CB274004CD9D0 /* ProfileViewController.swift in Sources */,
+				11B1C27D23C3786A00187639 /* DBManager.swift in Sources */,
 				110DFA20236B715C0045262E /* AuthService.swift in Sources */,
 				11B1C26623C3526C00187639 /* AttributedTextField.swift in Sources */,
 				11FD9CC8237455E1006E5EF2 /* AddChannelViewController.swift in Sources */,
+				11B1C27923C377B400187639 /* FMDatabasePool.m in Sources */,
 				11FD9CC523744147006E5EF2 /* ChannelCell.swift in Sources */,
 				11860FF5236C48E1004CD9D0 /* AvatarPickerViewController.swift in Sources */,
 				11B1C26823C35D0500187639 /* Tools.swift in Sources */,
@@ -374,13 +415,16 @@
 				11482B782365904F00B38695 /* AppDelegate.swift in Sources */,
 				115CA18723756D9200A01761 /* ChatCell.swift in Sources */,
 				1153E1C9236AD4DF00F9F707 /* CreateAccountViewController.swift in Sources */,
+				11B1C27A23C377B400187639 /* FMDatabaseAdditions.m in Sources */,
 				11B6E2B02374A81F00C7F159 /* Message.swift in Sources */,
 				11B1C26423C3257300187639 /* MyCell.swift in Sources */,
 				11482B902369DA5400B38695 /* ChatViewController.swift in Sources */,
 				11482B922369DA6400B38695 /* ChannelViewController.swift in Sources */,
 				11482B8D2369C58100B38695 /* SWRevealViewController.m in Sources */,
 				11860FFB236C7089004CD9D0 /* CustomTextField.swift in Sources */,
+				11B1C27B23C377B400187639 /* FMResultSet.m in Sources */,
 				11B1C26A23C35DB500187639 /* UIViewExtenstion.swift in Sources */,
+				11B1C27723C377B400187639 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
