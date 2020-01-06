@@ -39,7 +39,8 @@ class SocketService: NSObject {
             
             let channel = Channel(id: id, description: description, name: name)
             MesssageService.instance.channels.append(channel)
-            
+            DBManager.instance.insertChannels(channels: [channel])
+
             complection(true)
         }
     }
@@ -65,6 +66,7 @@ class SocketService: NSObject {
                 
                 let newMessage = Message(id: messageId, messageBody: messageBody, channelId: channelId, userId: userId, userName: username, userAvatar: userAvatar, userAvatarColor: userAvatarColor, timeStamp: timeStamp)
                 MesssageService.instance.messages.append(newMessage)
+                DBManager.instance.insertMessages(messages: [newMessage])
                 complection(true)
                 
             } else {

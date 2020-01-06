@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
       SocketService.instance.establishConnection()
+      DBManager.instance.createDatabase()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

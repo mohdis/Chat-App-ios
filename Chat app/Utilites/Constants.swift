@@ -43,3 +43,17 @@ let TOKEN_KEY = "token"
 let USER_DATA_CHANGED = Notification.Name("userDataChanged")
 let CHANNELS_LOADED = Notification.Name("channelsLoaded")
 let CHANNEL_SELECTED = Notification.Name("channelSelected")
+//MARK: Tablefields
+//Message table
+let MESSAGE_ID = "_id"
+let MESSAGE_MESSAGE_BODY = "messageBody"
+let MESSAGE_USER_ID = "userId"
+let MESSAGE_CHANNEL_ID = "channelId"
+let MESSAGE_USER_NAME = "userName"
+let MESSAGE_USER_AVATER = "userAvatar"
+let MESSAGE_USER_AVATAR_COLOR = "userAvatarColor"
+let MESSAGE_TIME_STAMP = "timeStamp"
+//Channel table
+let CHANNEL_ID = "_id"
+let CHANNEL_NAME = "name"
+let CHANNEL_DESCRIPTIOM = "description"
