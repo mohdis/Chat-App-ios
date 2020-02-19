@@ -25,10 +25,12 @@ class CreateAccountViewController: UIViewController {
         activityIndicatorChangeState(state: false)
         setupGesture()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupAvatarImage()
     }
+    
+  
    
 
     @IBAction func closeBtnPressed(_ sender: Any) {
@@ -66,7 +68,7 @@ class CreateAccountViewController: UIViewController {
     }
 
     @IBAction func chooseAvatarPressed(_ sender: Any) {
-        performSegue(withIdentifier:TO_AVATAR_PICKER , sender: nil)
+        performSegue(withIdentifier: TO_AVATAR_PICKER , sender: nil)
     }
     
     
@@ -106,7 +108,8 @@ class CreateAccountViewController: UIViewController {
         if UserDataService.instance.avatarName != "" {
             userImg.setImage(UIImage(named: UserDataService.instance.avatarName), for: .normal)
             avatarName = UserDataService.instance.avatarName
-            
+            print(UserDataService.instance.avatarName)
+
             if avatarName.contains("light") && backgroundColor == nil {
                 userImg.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             }

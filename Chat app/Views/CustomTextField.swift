@@ -19,6 +19,6 @@ class CustomTextField: UITextField {
         setup()
     }
     func setup() {
-       self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.09803921569, green: 0.05882352941, blue: 0.4431372549, alpha: 0.5) ])
+       self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.1450980392, green: 0.3725490196, blue: 0.3333333333, alpha: 0.8470588235) ])
     }
 }

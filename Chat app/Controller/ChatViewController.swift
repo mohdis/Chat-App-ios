@@ -16,11 +16,9 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var btnSlider: UIButton!
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var sendBtn: UIButton!
-    var lableHeightIndicator: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        lableHeightIndicator = UILabel(frame: CGRect(x: -1000, y: -111, width: view.frame.width - 100, height: 10))
-        lableHeightIndicator.numberOfLines = 0
+       
         
         initSlider()
         setupUser()
@@ -127,12 +125,11 @@ class ChatViewController: UIViewController {
         } else {
             channelNameLbl.text = "Please Log in..."
             tableview.reloadData()
-            self.typingUsersLbl.text = ""
+           // self.typingUsersLbl.text = ""
 
         }
 }
     @objc func channelSelected() {
-        print(5)
         channelNameLbl.text = MesssageService.instance.selectedChannel?.name ?? "Chat App"
         self.getMessages()
 

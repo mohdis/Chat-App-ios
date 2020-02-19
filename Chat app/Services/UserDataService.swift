@@ -8,49 +8,52 @@
 
 import Foundation
 class UserDataService {
-   static let instance = UserDataService()
-     var id: String {
-    set {
-      UserDefaults.standard.setValue(newValue, forKey: "user_id")
+    static let instance = UserDataService()
+    var id: String {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "user_id")
         }
         get {
-            return UserDefaults.standard.object(forKey: "user_id") as! String
+            return UserDefaults.standard.string(forKey: "user_id")!
         }
         
     }
     public private(set) var name : String {
         set {
-            UserDefaults.standard.setValue(newValue, forKey: "user_name")
+            UserDefaults.standard.set(newValue, forKey: "user_name")
         }
         get {
-            return UserDefaults.standard.object(forKey: "user_name") as! String
+            return UserDefaults.standard.string(forKey: "user_name")!
         }
         
     }
     public private(set) var email : String  {
         set {
-            UserDefaults.standard.setValue(newValue, forKey: "user_email")
+            UserDefaults.standard.set(newValue, forKey: "user_email")
         }
         get {
-            return UserDefaults.standard.object(forKey: "user_email") as! String
+            return UserDefaults.standard.string(forKey: "user_email")!
         }
         
     }
     public private(set) var avatarName : String  {
         set {
-            UserDefaults.standard.setValue(newValue, forKey: "user_avaterName")
+            UserDefaults.standard.set(newValue, forKey: "user_avatarName")
         }
         get {
-            return UserDefaults.standard.object(forKey: "user_avaterName") as! String
+            guard let avatarName =  UserDefaults.standard.string(forKey: "user_avatarName") else {
+                return ""
+                
+            }
+            return avatarName
         }
-        
     }
     public private(set) var avatarColor : String  {
         set {
-            UserDefaults.standard.setValue(newValue, forKey: "user_avatarColor")
+            UserDefaults.standard.set(newValue, forKey: "user_avatarColor")
         }
         get {
-            return UserDefaults.standard.object(forKey: "user_avatarColor") as! String
+            return UserDefaults.standard.string(forKey: "user_avatarColor")!
         }
         
     }
@@ -69,13 +72,13 @@ class UserDataService {
     func logout() {
         //id = ""
         //name = ""
-      //  email = ""
-       // avatarName = ""
+        //  email = ""
+        // avatarName = ""
         //avatarColor = ""
         AuthService.instance.logout()
         MesssageService.instance.clearChannel()
         MesssageService.instance.clearMessage()
-
+        
         NotificationCenter.default.post(name: USER_DATA_CHANGED, object: nil)
     }
     
@@ -90,7 +93,7 @@ class UserDataService {
         scanner.scanUpToCharacters(from: comma, into: &g)
         scanner.scanUpToCharacters(from: comma, into: &b)
         scanner.scanUpToCharacters(from: comma, into: &a)
-
+        
         
         let defaultColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         guard let red = r else {return defaultColor}
@@ -98,8 +101,8 @@ class UserDataService {
         guard let blue = b else {return defaultColor}
         guard let alpha = a else {return defaultColor}
         
-       let returnColor = UIColor(displayP3Red: CGFloat(red.doubleValue), green: CGFloat(green.doubleValue), blue: CGFloat(blue.doubleValue), alpha: CGFloat(alpha.doubleValue))
-
+        let returnColor = UIColor(displayP3Red: CGFloat(red.doubleValue), green: CGFloat(green.doubleValue), blue: CGFloat(blue.doubleValue), alpha: CGFloat(alpha.doubleValue))
+        
         return returnColor
     }
     

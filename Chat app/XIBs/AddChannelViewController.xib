@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.43"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,10 +25,11 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XV4-ef-PUo" customClass="RoundedButton" customModule="Chat_app" customModuleProvider="target">
-                    <rect key="frame" x="32" y="80" width="311" height="300"/>
+                    <rect key="frame" x="32" y="60" width="311" height="300"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DW1-j5-S1o">
                             <rect key="frame" x="275" y="8" width="28" height="28"/>
+                            <color key="tintColor" red="0.1450980392" green="0.37254901959999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" image="closeButton"/>
                             <connections>
                                 <action selector="closePressed:" destination="-1" eventType="touchUpInside" id="PeR-nZ-NsP"/>
@@ -38,7 +37,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5U-Om-RjC" customClass="RoundedButton" customModule="Chat_app" customModuleProvider="target">
                             <rect key="frame" x="30.5" y="244" width="250" height="40"/>
-                            <color key="backgroundColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.1450980392" green="0.37254901959999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Mee-aB-xqA"/>
                                 <constraint firstAttribute="width" constant="250" id="qeD-k4-Khq"/>
@@ -54,11 +53,11 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w55-Kn-ONb">
                             <rect key="frame" x="80" y="30" width="151.5" height="29"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
-                            <color key="textColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.1450980392" green="0.37254901959999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ueT-bK-El8">
-                            <rect key="frame" x="30.5" y="105" width="250" height="90"/>
+                            <rect key="frame" x="30.5" y="106" width="250" height="88"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaL-a7-hjc" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -66,31 +65,31 @@
                                         <constraint firstAttribute="width" constant="250" id="2jO-6g-dS4"/>
                                         <constraint firstAttribute="height" constant="30" id="vRN-6c-QCe"/>
                                     </constraints>
-                                    <color key="textColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.1450980392" green="0.37254901959999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5e-Be-whU">
-                                    <rect key="frame" x="0.0" y="38" width="250" height="3"/>
-                                    <color key="backgroundColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="0.0" y="38" width="250" height="2"/>
+                                    <color key="backgroundColor" red="0.1450980392" green="0.37254901959999998" blue="0.33333333329999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="3" id="mqk-Qm-dd5"/>
+                                        <constraint firstAttribute="height" constant="2" id="mqk-Qm-dd5"/>
                                     </constraints>
                                 </view>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQO-8R-aLo" customClass="CustomTextField" customModule="Chat_app" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="49" width="250" height="30"/>
+                                    <rect key="frame" x="0.0" y="48" width="250" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="AFd-VK-wjF"/>
                                     </constraints>
-                                    <color key="textColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.1450980392" green="0.37254901959999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryo-O9-HpO">
-                                    <rect key="frame" x="0.0" y="87" width="250" height="3"/>
-                                    <color key="backgroundColor" red="0.068117116369999994" green="0.1173086713" blue="0.44015704309999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="0.0" y="86" width="250" height="2"/>
+                                    <color key="backgroundColor" red="0.1450980392" green="0.37254901959999998" blue="0.33333333329999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="3" id="Gs7-CS-sNN"/>
+                                        <constraint firstAttribute="height" constant="2" id="Gs7-CS-sNN"/>
                                     </constraints>
                                 </view>
                             </subviews>
