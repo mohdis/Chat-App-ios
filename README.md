@@ -2,8 +2,6 @@
 create your account chat with your friends in channels and also make channel
 we save your data localy
 
-<img src="screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-02-19%20at%2018.05.05" width = "100" height = "200" />
-
 **Requirements**
 - xcode 10.4
 - swift 4.2
@@ -16,7 +14,11 @@ we save your data localy
 - Use locale Database
 
 **Screenshot**
-
+<img src="screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-02-19%20at%2018.05.05" width = "200" height = "430" />
+<img src="screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-02-19%20at%2018.05.05" width = "200" height = "430" />
+<img src="screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-02-19%20at%2018.05.05" width = "200" height = "430" />
+<img src="screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-02-19%20at%2018.05.05" width = "200" height = "430" />
+<img src="screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-02-19%20at%2018.05.05" width = "200" height = "430" />
 
 **Libraries & Dependencies**
 - [Alamofire]: Elegant HTTP Networking in Swift
