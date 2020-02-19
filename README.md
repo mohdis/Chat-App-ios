@@ -11,7 +11,7 @@ we save your data localy
 - Use [mac chat api] API
 - Chat base on channels
 - Support two language. English & Persian
-- Use locale Database
+- Use local Database
 
 **Screenshot**
 
